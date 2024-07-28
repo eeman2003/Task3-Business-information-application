@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Information Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Business Information Application</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#top-food">Top Food Businesses</a></li>
+            <li><a href="#top-schools">Top Schools</a></li>
+            <li><a href="#top-real-estate">Top Real Estate Agents</a></li>
+            <li><a href="#top-law-firms">Top Law Firms</a></li>
+            <li><a href="#top-clinics">Top Clinics</a></li>
+        </ul>
+    </nav>
+    <button id="admin-button">Admin Panel</button>
+    <section id="search">
+        <h2>Search Businesses</h2>
+        <form id="search-form">
+            <select id="search-area">
+                <!-- Cities and towns will be dynamically loaded here -->
+            </select>
+            <select id="search-category">
+                <!-- Categories will be dynamically loaded here -->
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results" class="grid-container">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <section id="categories">
+        <h2>Categories</h2>
+        <div id="categories-content" class="grid-container"></div>
+    </section>
+    <section id="top-food">
+        <h2>Top Food Businesses</h2>
+        <div id="top-food-content" class="grid-container"></div>
+    </section>
+    <section id="top-schools">
+        <h2>Top Schools</h2>
+        <div id="top-schools-content" class="grid-container"></div>
+    </section>
+    <section id="top-real-estate">
+        <h2>Top Real Estate Agents</h2>
+        <div id="top-real-estate-content" class="grid-container"></div>
+    </section>
+    <section id="top-law-firms">
+        <h2>Top Law Firms</h2>
+        <div id="top-law-firms-content" class="grid-container"></div>
+    </section>
+    <section id="top-clinics">
+        <h2>Top Clinics</h2>
+        <div id="top-clinics-content" class="grid-container"></div>
+    </section>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add City and Town</h2>
+            <form id="city-form">
+                <input type="text" id="city-name" placeholder="City Name" required>
+                <input type="text" id="town-name" placeholder="Town Name" required>
+                <button type="submit">Add City/Town</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Add Business Profile</h2>
+            <form id="business-form">
+                <input type="text" id="business-name" placeholder="Business Name" required>
+                <select id="business-category" required>
+                    <option value="restaurants">restaurants</option>
+                    <option value="schools">schools</option>
+                    <option value="real estate">real estate</option>
+                    <option value="law firms">law firms</option>
+                    <option value="clinics">clinics</option>
+                </select>
+                <textarea id="business-description" placeholder="Business Description" required></textarea>
+                <input type="file" id="business-image" accept="image/*" required>
+                <select id="business-area">
+                    <!-- Cities and towns will be dynamically loaded here -->
+                </select>
+                <button type="submit">Add Business Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="admin-script.js"></script>
+</body>
+</html>
